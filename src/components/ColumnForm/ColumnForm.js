@@ -7,14 +7,14 @@ import { useDispatch } from 'react-redux';
 
 const ColumnForm = props => {
 
-    const payload = useDispatch();
+    const dispatch = useDispatch();
 
     const [title, setTitle] = useState('');
     const [icon, setIcon] = useState('');
 
     const handleSubmit = e => {
         e.preventDefault();
-        payload({ type: 'ADD_COLUMN', newColumn: { title, icon } });
+        dispatch({ type: 'ADD_COLUMN', payload: { title, icon } });
         setTitle('');
         setIcon('');
     };
