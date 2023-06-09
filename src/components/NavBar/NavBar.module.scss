@@ -1,0 +1,39 @@
+@import '../../styles/settings.scss';
+
+nav {
+    height: 50px;
+    display: flex;
+}
+
+.navbar_lf {
+    flex: 1;
+    text-align: left;
+    padding-left: 10px;
+    position: relative;
+ 
+  span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+  }
+}
+
+.navbar_rh {
+    flex: 1;
+    text-align: end;
+    padding-right: 10px;
+}
+
+.navbar_rh ul li {
+    display: inline;
+    margin: 0 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: $color-light;
+}
+
