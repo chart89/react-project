@@ -2,20 +2,29 @@ import { createStore } from 'redux';
 import initialState from './initialState';
 import shortid from 'shortid';
 import strContains from '../utils/strContains';
-//selectors
+
+
+//SELECTORS
 export const getFilteredCards = ({cards, searchString}, columnId) => cards
   .filter(card => card.columnId === columnId && strContains(card.title, searchString));
 
 export const getAllColumns = state => state.columns;
 
-// action creators
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === 1);
+
+export const getColumnsByList = ({ columns }) => columns.filter(column => column.listId === 1); 
+
+
+
+// ACTION CREATORS
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
+
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
+
 export const strSearch = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
 
 
 const reducer = (state, action) => {
-
 
     switch (action.type) {
         case 'ADD_COLUMN':
