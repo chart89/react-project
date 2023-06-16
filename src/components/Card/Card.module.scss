@@ -16,9 +16,10 @@
     background: transparent;
     border: none;
     cursor: pointer;
-
+    &.isActive {
+        color: yellow;
+    }
 }
-
-.button:hover {
-    color: red;
+.button span {
+    transition: all 1s;
 }
