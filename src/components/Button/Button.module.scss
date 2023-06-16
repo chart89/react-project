@@ -33,4 +33,8 @@
             color: darken($color-light, 20%);
         }
     }
+
+    &.fav_button {
+        color: yellow;
+      }
 }

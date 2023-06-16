@@ -35,9 +35,14 @@
   padding: math.div($base-size, 2) 0;
 }
 
+.linkActive {
+  color: $color-warning;
+}
+
 @media (max-width: 767px) {
   .column {
     width: 100%;
     margin: 0 0 $base-size 0;
   }
 }
+
